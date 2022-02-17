@@ -1,0 +1,132 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid text-center py-10 bg-light-info">
+        <h1>공지사항</h1>
+    </div>
+
+    <div class="container pt-5 px-0">
+
+        <div class="mb-10 d-flex justify-content-between px-3">
+            <div class="d-flex">
+                <ul class="nav nav-stretch fs-5 fw-bold nav-line-tabs nav-line-tabs-2x border-transparent"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-active-primary active" data-bs-toggle="tab" role="tab"
+                           href="#" aria-selected="false">전체</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-active-primary ms-3" data-bs-toggle="tab"
+                           role="tab" href="#" aria-selected="false">카테고리1</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link text-active-primary ms-3" data-bs-toggle="tab"
+                           role="tab" href="#" aria-selected="false">카테고리2</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="d-flex align-self-center">
+                <form id="kt_sidebar_search_form" action="../../demo5/dist/apps/devs/search.html"
+                      class="w-100 position-relative" autocomplete="off">
+                    <!--begin::Hidden input(Added to disable form autocomplete)-->
+                    <input type="hidden"/>
+                    <!--end::Hidden input-->
+                    <!--begin::Icon-->
+                    <!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+                    <span class="svg-icon svg-icon-2 svg-icon-gray-700 position-absolute top-50 translate-middle-y ms-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                             fill="none">
+                            <rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1"
+                                  transform="rotate(45 17.0365 15.1223)" fill="black"/>
+                            <path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z"
+                                  fill="black"/>
+                        </svg>
+                    </span>
+                    <!--end::Svg Icon-->
+                    <!--end::Icon-->
+                    <!--begin::Input-->
+                    <input type="text" class="form-control bg-transparent ps-13 fs-7 h-40px" name="search" value=""
+                           placeholder="검색"/>
+                    <!--end::Input-->
+                </form>
+            </div>
+        </div>
+
+
+        <h5>총 5건</h5>
+        <div class="table-responsive border-bottom border-top border-dark">
+            <table class="table gs-4 gy-4 gx-4 mb-0">
+                <tbody>
+                <tr class="border-bottom border-gray-300">
+                    <td>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">
+                                <span class="text-info me-1">공지사항</span>동문회 경조사) 화환 신청, 근조기 신청, 동문 전체 알림 등 절차 안내
+                            </a>
+                            <span class="text-gray-400 fw-bold">2022-10-12</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="border-bottom border-gray-300">
+                    <td>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">
+                                <span class="text-info me-1">공지사항</span>동문회 경조사) 화환 신청, 근조기 신청, 동문 전체 알림 등 절차 안내
+                            </a>
+                            <span class="text-gray-400 fw-bold">2022-10-12</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="border-bottom border-gray-300">
+                    <td>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">
+                                <span class="text-info me-1">공지사항</span>동문회 경조사) 화환 신청, 근조기 신청, 동문 전체 알림 등 절차 안내
+                            </a>
+                            <span class="text-gray-400 fw-bold">2022-10-12</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="border-bottom border-gray-300">
+                    <td>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">
+                                <span class="text-info me-1">공지사항</span>동문회 경조사) 화환 신청, 근조기 신청, 동문 전체 알림 등 절차 안내
+                            </a>
+                            <span class="text-gray-400 fw-bold">2022-10-12</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="border-bottom border-gray-300">
+                    <td>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="text-gray-900 text-hover-primary fs-6 fw-bolder">
+                                <span class="text-info me-1">공지사항</span>동문회 경조사) 화환 신청, 근조기 신청, 동문 전체 알림 등 절차 안내
+                            </a>
+                            <span class="text-gray-400 fw-bold">2022-10-12</span>
+                        </div>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <span class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
+                      fill="black"/>
+                <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+                      fill="black"/>
+            </svg>
+        </span>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}

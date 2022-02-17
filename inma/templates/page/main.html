@@ -1,0 +1,792 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div></div>
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Header Section-->
+        <div class="mb-0" id="home">
+            <!--begin::Wrapper-->
+            <div class="bgi-no-repeat bgi-size-contain bgi-position-x-center"
+                 style="background: url({% static 'assets/media/inma/landing-background.jpg' %});
+                         background-size: cover;
+                         background-position: center;
+                         ">
+                <!--begin::Landing hero-->
+                <div class="d-flex flex-column flex-fill w-100 min-h-350px min-h-lg-500px px-9">
+                    <!--begin::Heading-->
+                    <div class="text-center mb-5 mb-lg-10 py-20 py-lg-20">
+                        <!--begin::Title-->
+                        <h1 class="text-dark opacity-100 lh-base fw-bolder fs-2x fs-lg-3x mb-15">인천전자마이스터고등학교
+                            <br>동문회</h1>
+                    </div>
+                    <!--end::Heading-->
+                </div>
+                <!--end::Landing hero-->
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Curve bottom-->
+            <div class="mb-10 mb-lg-20">
+            </div>
+            <!--end::Curve bottom-->
+        </div>
+        <!--end::Header Section-->
+        <!--begin::How It Works Section-->
+        <div class="mb-n10 mb-lg-n20 z-index-2">
+            <!--begin::Container-->
+            <div class="container">
+                <!--begin::Heading-->
+                <div class="text-center mb-17">
+                    <!--begin::Title-->
+                    <h3 class="fs-2hx text-dark mb-5" id="how-it-works" data-kt-scroll-offset="{default: 100, lg: 150}">
+                        섹션 제목
+                    </h3>
+                    <!--end::Title-->
+                    <!--begin::Text-->
+                    <div class="fs-5 text-muted fw-bold">때 이른 봄 몇 송이 꺾어다
+                        너의 방 문 앞에 두었어<br>
+                        긴 잠 실컷 자고 나오면
+                        그때쯤엔 예쁘게 피어 있겠다
+                    </div>
+                    <!--end::Text-->
+                </div>
+                <!--end::Heading-->
+                <!--begin::Row-->
+                <div class="row w-100 gy-10 mb-md-20">
+                    <!--begin::Col-->
+                    <div class="col-md-4 px-5">
+                        <!--begin::Story-->
+                        <div class="text-center mb-10 mb-md-0">
+                            <!--begin::Illustration-->
+                            <img src="{% static 'assets/media/illustrations/sketchy-1/2.png' %}" class="mh-125px mb-9"
+                                 alt=""/>
+                            <!--end::Illustration-->
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-center mb-5">
+                                <!--begin::Badge-->
+                                <span class="badge badge-circle badge-light-success fw-bolder p-5 me-3 fs-3">1</span>
+                                <!--end::Badge-->
+                                <!--begin::Title-->
+                                <div class="fs-5 fs-lg-3 fw-bolder text-dark">첫번째</div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Description-->
+                            <div class="fw-bold fs-6 fs-lg-4 text-muted">
+                                너 없이 보는 첫 봄이, 여름이
+                                괜히 왜 이렇게 예쁘니<br>
+                                다 가기 전에 널 보여줘야 하는데
+                                음-음, 꼭 봐야 하는데
+                            </div>
+                            <!--end::Description-->
+                        </div>
+                        <!--end::Story-->
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-md-4 px-5">
+                        <!--begin::Story-->
+                        <div class="text-center mb-10 mb-md-0">
+                            <!--begin::Illustration-->
+                            <img src="{% static 'assets/media/illustrations/sketchy-1/8.png' %}" class="mh-125px mb-9"
+                                 alt=""/>
+                            <!--end::Illustration-->
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-center mb-5">
+                                <!--begin::Badge-->
+                                <span class="badge badge-circle badge-light-success fw-bolder p-5 me-3 fs-3">2</span>
+                                <!--end::Badge-->
+                                <!--begin::Title-->
+                                <div class="fs-5 fs-lg-3 fw-bolder text-dark">두번째</div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Description-->
+                            <div class="fw-bold fs-6 fs-lg-4 text-muted">별 띄운 여름 한 컵 따라다
+                                너의 머리맡에 두었어
+                                <br>
+                                금세 다 녹아버릴 텐데
+                                너는 아직 혼자 쉬고 싶은가 봐
+                            </div>
+                            <!--end::Description-->
+                        </div>
+                        <!--end::Story-->
+                    </div>
+                    <!--end::Col-->
+                    <!--begin::Col-->
+                    <div class="col-md-4 px-5">
+                        <!--begin::Story-->
+                        <div class="text-center mb-10 mb-md-0">
+                            <!--begin::Illustration-->
+                            <img src="{% static 'assets/media/illustrations/sketchy-1/12.png' %}" class="mh-125px mb-9"
+                                 alt=""/>
+                            <!--end::Illustration-->
+                            <!--begin::Heading-->
+                            <div class="d-flex flex-center mb-5">
+                                <!--begin::Badge-->
+                                <span class="badge badge-circle badge-light-success fw-bolder p-5 me-3 fs-3">3</span>
+                                <!--end::Badge-->
+                                <!--begin::Title-->
+                                <div class="fs-5 fs-lg-3 fw-bolder text-dark">세번째</div>
+                                <!--end::Title-->
+                            </div>
+                            <!--end::Heading-->
+                            <!--begin::Description-->
+                            <div class="fw-bold fs-6 fs-lg-4 text-muted">
+                                내게 기대어 조각잠을 자던
+                                그 모습 그대로 잠들었구나
+                                무슨 꿈을 꾸니?<br>
+                                깨어나면 이야기해 줄 거지?
+                                언제나의 아침처럼<br>
+                                음-, 음-
+                            </div>
+                            <!--end::Description-->
+                        </div>
+                        <!--end::Story-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Row-->
+                <!--begin::Product slider-->
+                <div class="tns tns-default">
+                    <!--begin::Slider-->
+                    <div data-tns="true" data-tns-loop="true" data-tns-swipe-angle="false" data-tns-speed="2000"
+                         data-tns-autoplay="true" data-tns-autoplay-timeout="18000" data-tns-controls="true"
+                         data-tns-nav="false" data-tns-items="1" data-tns-center="false" data-tns-dots="false"
+                         data-tns-prev-button="#kt_team_slider_prev1" data-tns-next-button="#kt_team_slider_next1">
+                        <!--begin::Item-->
+                        <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                            <img src="{% static 'assets/media/inma/slide1.jpg' %}"
+                                 class="card-rounded shadow mw-100" alt=""/>
+                        </div>
+                        <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                            <img src="{% static 'assets/media/inma/slide2.jpg' %}"
+                                 class="card-rounded shadow mw-100" alt=""/>
+                        </div>
+                        <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                            <img src="{% static 'assets/media/inma/slide3.jpg' %}"
+                                 class="card-rounded shadow mw-100" alt=""/>
+                        </div>
+                        <div class="text-center px-5 pt-5 pt-lg-10 px-lg-10">
+                            <img src="{% static 'assets/media/inma/slide4.jpg' %}"
+                                 class="card-rounded shadow mw-100" alt=""/>
+                        </div>
+                        <!--end::Item-->
+                    </div>
+                    <!--end::Slider-->
+                    <!--begin::Slider button-->
+                    <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_prev1">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr074.svg-->
+                        <span class="svg-icon svg-icon-3x">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+									<path d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z"
+                                          fill="black"/>
+								</svg>
+							</span>
+                        <!--end::Svg Icon-->
+                    </button>
+                    <!--end::Slider button-->
+                    <!--begin::Slider button-->
+                    <button class="btn btn-icon btn-active-color-primary" id="kt_team_slider_next1">
+                        <!--begin::Svg Icon | path: icons/duotune/arrows/arr071.svg-->
+                        <span class="svg-icon svg-icon-3x">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none">
+									<path d="M12.6343 12.5657L8.45001 16.75C8.0358 17.1642 8.0358 17.8358 8.45001 18.25C8.86423 18.6642 9.5358 18.6642 9.95001 18.25L15.4929 12.7071C15.8834 12.3166 15.8834 11.6834 15.4929 11.2929L9.95001 5.75C9.5358 5.33579 8.86423 5.33579 8.45001 5.75C8.0358 6.16421 8.0358 6.83579 8.45001 7.25L12.6343 11.4343C12.9467 11.7467 12.9467 12.2533 12.6343 12.5657Z"
+                                          fill="black"/>
+								</svg>
+							</span>
+                        <!--end::Svg Icon-->
+                    </button>
+                    <!--end::Slider button-->
+                </div>
+                <!--end::Product slider-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::How It Works Section-->
+        <!--begin::Statistics Section-->
+        <div class="mt-sm-n10">
+            <!--begin::Curve top-->
+            <div class="landing-curve landing-dark-color">
+                <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"
+                          fill="currentColor"></path>
+                </svg>
+            </div>
+            <!--end::Curve top-->
+            <!--begin::Wrapper-->
+            <div class="pb-15 pt-18 landing-dark-bg">
+                <!--begin::Container-->
+                <div class="container">
+                    <!--begin::Heading-->
+                    <div class="text-center mt-15 mb-18" id="achievements"
+                         data-kt-scroll-offset="{default: 100, lg: 150}">
+                        <!--begin::Title-->
+                        <h3 class="fs-2hx text-white fw-bolder mb-5">섹션제목2</h3>
+                        <!--end::Title-->
+                        <!--begin::Description-->
+                        <div class="fs-5 text-gray-700 fw-bold">
+                            나리는 꽃가루에 눈이 따끔해 (아야)
+                            눈물이 고여도 꾹 참을래<br>
+                            내 마음 한켠 비밀스런 오르골에 넣어두고서
+                            영원히 되감을 순간이니까
+                        </div>
+                        <!--end::Description-->
+                    </div>
+                    <!--end::Heading-->
+                    <!--begin::Statistics-->
+                    <div class="d-flex flex-center">
+                        <!--begin::Items-->
+                        <div class="d-flex flex-wrap flex-center justify-content-lg-between mb-15 mx-auto w-xl-900px">
+                            <!--begin::Item-->
+                            <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
+                                 style="background-image: url({% static 'assets/media/svg/misc/octagon.svg' %})">
+                                <!--begin::Symbol-->
+                                <!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
+                                <span class="svg-icon svg-icon-2tx svg-icon-white mb-3">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none">
+											<rect x="2" y="2" width="9" height="9" rx="2" fill="black"/>
+											<rect opacity="0.3" x="13" y="2" width="9" height="9" rx="2" fill="black"/>
+											<rect opacity="0.3" x="13" y="13" width="9" height="9" rx="2" fill="black"/>
+											<rect opacity="0.3" x="2" y="13" width="9" height="9" rx="2" fill="black"/>
+										</svg>
+									</span>
+                                <!--end::Svg Icon-->
+                                <!--end::Symbol-->
+                                <!--begin::Info-->
+                                <div class="mb-0">
+                                    <!--begin::Value-->
+                                    <div class="fs-lg-2hx fs-2x fw-bolder text-white d-flex flex-center">
+                                        <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="700"
+                                             data-kt-countup-suffix="+">0
+                                        </div>
+                                    </div>
+                                    <!--end::Value-->
+                                    <!--begin::Label-->
+                                    <span class="text-gray-600 fw-bold fs-5 lh-0">숫자 첫번째</span>
+                                    <!--end::Label-->
+                                </div>
+                                <!--end::Info-->
+                            </div>
+                            <!--end::Item-->
+                            <!--begin::Item-->
+                            <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
+                                 style="background-image: url({% static 'assets/media/svg/misc/octagon.svg' %})">
+                                <!--begin::Symbol-->
+                                <!--begin::Svg Icon | path: icons/duotune/graphs/gra008.svg-->
+                                <span class="svg-icon svg-icon-2tx svg-icon-white mb-3">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none">
+											<path d="M13 10.9128V3.01281C13 2.41281 13.5 1.91281 14.1 2.01281C16.1 2.21281 17.9 3.11284 19.3 4.61284C20.7 6.01284 21.6 7.91285 21.9 9.81285C22 10.4129 21.5 10.9128 20.9 10.9128H13Z"
+                                                  fill="black"/>
+											<path opacity="0.3"
+                                                  d="M13 12.9128V20.8129C13 21.4129 13.5 21.9129 14.1 21.8129C16.1 21.6129 17.9 20.7128 19.3 19.2128C20.7 17.8128 21.6 15.9128 21.9 14.0128C22 13.4128 21.5 12.9128 20.9 12.9128H13Z"
+                                                  fill="black"/>
+											<path opacity="0.3"
+                                                  d="M11 19.8129C11 20.4129 10.5 20.9129 9.89999 20.8129C5.49999 20.2129 2 16.5128 2 11.9128C2 7.31283 5.39999 3.51281 9.89999 3.01281C10.5 2.91281 11 3.41281 11 4.01281V19.8129Z"
+                                                  fill="black"/>
+										</svg>
+									</span>
+                                <!--end::Svg Icon-->
+                                <!--end::Symbol-->
+                                <!--begin::Info-->
+                                <div class="mb-0">
+                                    <!--begin::Value-->
+                                    <div class="fs-lg-2hx fs-2x fw-bolder text-white d-flex flex-center">
+                                        <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="80"
+                                             data-kt-countup-suffix="K+">0
+                                        </div>
+                                    </div>
+                                    <!--end::Value-->
+                                    <!--begin::Label-->
+                                    <span class="text-gray-600 fw-bold fs-5 lh-0">숫자 두번째</span>
+                                    <!--end::Label-->
+                                </div>
+                                <!--end::Info-->
+                            </div>
+                            <!--end::Item-->
+                            <!--begin::Item-->
+                            <div class="d-flex flex-column flex-center h-200px w-200px h-lg-250px w-lg-250px m-3 bgi-no-repeat bgi-position-center bgi-size-contain"
+                                 style="background-image: url({% static 'assets/media/svg/misc/octagon.svg' %})">
+                                <!--begin::Symbol-->
+                                <!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
+                                <span class="svg-icon svg-icon-2tx svg-icon-white mb-3">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none">
+											<path d="M21 10H13V11C13 11.6 12.6 12 12 12C11.4 12 11 11.6 11 11V10H3C2.4 10 2 10.4 2 11V13H22V11C22 10.4 21.6 10 21 10Z"
+                                                  fill="black"/>
+											<path opacity="0.3"
+                                                  d="M12 12C11.4 12 11 11.6 11 11V3C11 2.4 11.4 2 12 2C12.6 2 13 2.4 13 3V11C13 11.6 12.6 12 12 12Z"
+                                                  fill="black"/>
+											<path opacity="0.3"
+                                                  d="M18.1 21H5.9C5.4 21 4.9 20.6 4.8 20.1L3 13H21L19.2 20.1C19.1 20.6 18.6 21 18.1 21ZM13 18V15C13 14.4 12.6 14 12 14C11.4 14 11 14.4 11 15V18C11 18.6 11.4 19 12 19C12.6 19 13 18.6 13 18ZM17 18V15C17 14.4 16.6 14 16 14C15.4 14 15 14.4 15 15V18C15 18.6 15.4 19 16 19C16.6 19 17 18.6 17 18ZM9 18V15C9 14.4 8.6 14 8 14C7.4 14 7 14.4 7 15V18C7 18.6 7.4 19 8 19C8.6 19 9 18.6 9 18Z"
+                                                  fill="black"/>
+										</svg>
+									</span>
+                                <!--end::Svg Icon-->
+                                <!--end::Symbol-->
+                                <!--begin::Info-->
+                                <div class="mb-0">
+                                    <!--begin::Value-->
+                                    <div class="fs-lg-2hx fs-2x fw-bolder text-white d-flex flex-center">
+                                        <div class="min-w-70px" data-kt-countup="true" data-kt-countup-value="35"
+                                             data-kt-countup-suffix="M+">0
+                                        </div>
+                                    </div>
+                                    <!--end::Value-->
+                                    <!--begin::Label-->
+                                    <span class="text-gray-600 fw-bold fs-5 lh-0">숫자 세번째</span>
+                                    <!--end::Label-->
+                                </div>
+                                <!--end::Info-->
+                            </div>
+                            <!--end::Item-->
+                        </div>
+                        <!--end::Items-->
+                    </div>
+                    <!--end::Statistics-->
+                    <!--begin::Testimonial-->
+                    <div class="fs-2 fw-bold text-muted text-center mb-3">
+                        우리 둘의 마지막 페이지를 잘 부탁해<br>
+                        어느 작별이 이보다 완벽할까<br>
+                        Love me only till this spring
+                    </div>
+                    <!--end::Testimonial-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Curve bottom-->
+            <div class="landing-curve landing-dark-color">
+                <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z"
+                          fill="currentColor"></path>
+                </svg>
+            </div>
+            <!--end::Curve bottom-->
+        </div>
+        <!--end::Statistics Section-->
+        <!--begin::Team Section-->
+        <div class="py-10 py-lg-20">
+            <!--begin::Container-->
+            <div class="container">
+                <!--begin::Heading-->
+                <div class="text-center mb-12">
+                    <!--begin::Title-->
+                    <h3 class="fs-2hx text-dark mb-5" id="team" data-kt-scroll-offset="{default: 100, lg: 150}">
+                        섹션제목3
+                    </h3>
+                    <!--end::Title-->
+                    <!--begin::Sub-title-->
+                    <div class="fs-5 text-muted fw-bold">
+                        오 라일락 꽃이 지는 날 goodbye
+                        이런 결말이 어울려<br>
+                        안녕 꽃잎 같은 안녕
+                        하이얀 우리 봄날의 climax<br>
+                        아 얼마나 기쁜 일이야
+
+                    </div>
+                    <!--end::Sub-title=-->
+                </div>
+                <!--end::Heading-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Team Section-->
+        <!--begin::Projects Section-->
+        <div class="mb-lg-n15 position-relative z-index-2">
+            <!--begin::Container-->
+            <div class="container">
+                <!--begin::Card-->
+                <div class="card" style="filter: drop-shadow(0px 0px 40px rgba(68, 81, 96, 0.08))">
+                    <!--begin::Card body-->
+                    <div class="card-body p-lg-20">
+                        <!--begin::Heading-->
+                        <div class="text-center mb-5 mb-lg-10">
+                            <!--begin::Title-->
+                            <h3 class="fs-2hx text-dark mb-5" id="portfolio"
+                                data-kt-scroll-offset="{default: 100, lg: 150}">Photos</h3>
+                            <!--end::Title-->
+                        </div>
+                        <!--end::Heading-->
+                        <!--begin::Tabs wrapper-->
+                        <div class="d-flex flex-center mb-5 mb-lg-15">
+                            <!--begin::Tabs-->
+                            <ul class="nav border-transparent flex-center fs-5 fw-bold">
+                                <li class="nav-item">
+                                    <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6 active" href="#"
+                                       data-bs-toggle="tab" data-bs-target="#kt_landing_projects_latest">행사사진</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6" href="#"
+                                       data-bs-toggle="tab" data-bs-target="#kt_landing_projects_web_design">인전제</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-gray-500 text-active-primary px-3 px-lg-6" href="#"
+                                       data-bs-toggle="tab" data-bs-target="#kt_landing_projects_mobile_apps">기능반</a>
+                                </li>
+                            </ul>
+                            <!--end::Tabs-->
+                        </div>
+                        <!--end::Tabs wrapper-->
+                        <!--begin::Tabs content-->
+                        <div class="tab-content">
+                            <!--begin::Tab pane-->
+                            <div class="tab-pane fade show active" id="kt_landing_projects_latest">
+                                <!--begin::Row-->
+                                <div class="row g-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay h-lg-100"
+                                           data-fslightbox="lightbox-projects"
+                                           href="{% static 'assets/media/inma/hangsa/hangsa1.jpg' %}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px"
+                                                 style="background-image:url({% static 'assets/media/inma/hangsa/hangsa1.jpg' %})"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Row-->
+                                        <div class="row g-10 mb-10">
+                                            <!--begin::Col-->
+                                            <div class="col-lg-6">
+                                                <!--begin::Item-->
+                                                <a class="d-block card-rounded overlay"
+                                                   data-fslightbox="lightbox-projects"
+                                                   href="{% static 'assets/media/inma/hangsa/hangsa2.jpg' %}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                         style="background-image:url({% static 'assets/media/inma/hangsa/hangsa2.jpg' %})"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                                <!--end::Item-->
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col-lg-6">
+                                                <!--begin::Item-->
+                                                <a class="d-block card-rounded overlay"
+                                                   data-fslightbox="lightbox-projects"
+                                                   href="{% static 'assets/media/inma/hangsa/hangsa3.jpg' %}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                         style="background-image:url({% static 'assets/media/inma/hangsa/hangsa3.jpg' %})"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                                <!--end::Item-->
+                                            </div>
+                                            <!--end::Col-->
+                                        </div>
+                                        <!--end::Row-->
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects"
+                                           href="{% static 'assets/media/inma/hangsa/hangsa4.jpg' %}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                 style="background-image:url({% static 'assets/media/inma/hangsa/hangsa4.jpg' %})"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Tab pane-->
+                            <!--begin::Tab pane-->
+                            <div class="tab-pane fade" id="kt_landing_projects_web_design">
+                                <!--begin::Row-->
+                                <div class="row g-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay h-lg-100"
+                                           data-fslightbox="lightbox-projects"
+                                           href="{% static 'assets/media/inma/hangsa/fest1.jpg' %}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px"
+                                                 style="background-image:url('{% static 'assets/media/inma/hangsa/fest1.jpg' %}')"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Row-->
+                                        <div class="row g-10 mb-10">
+                                            <!--begin::Col-->
+                                            <div class="col-lg-6">
+                                                <!--begin::Item-->
+                                                <a class="d-block card-rounded overlay"
+                                                   data-fslightbox="lightbox-projects"
+                                                   href="{% static 'assets/media/inma/hangsa/fest2.jpg' %}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                         style="background-image:url({% static 'assets/media/inma/hangsa/fest2.jpg' %})"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                                <!--end::Item-->
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col-lg-6">
+                                                <!--begin::Item-->
+                                                <a class="d-block card-rounded overlay"
+                                                   data-fslightbox="lightbox-projects"
+                                                   href="{% static 'assets/media/inma/hangsa/fest3.jpg' %}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                         style="background-image:url({% static 'assets/media/inma/hangsa/fest3.jpg' %})"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                                <!--end::Item-->
+                                            </div>
+                                            <!--end::Col-->
+                                        </div>
+                                        <!--end::Row-->
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects"
+                                           href="{% static 'assets/media/inma/hangsa/fest4.jpg' %}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                 style="background-image:url({% static 'assets/media/inma/hangsa/fest4.jpg' %})"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Tab pane-->
+                            <!--begin::Tab pane-->
+                            <div class="tab-pane fade" id="kt_landing_projects_mobile_apps">
+                                <!--begin::Row-->
+                                <div class="row g-10">
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Row-->
+                                        <div class="row g-10 mb-10">
+                                            <!--begin::Col-->
+                                            <div class="col-lg-6">
+                                                <!--begin::Item-->
+                                                <a class="d-block card-rounded overlay"
+                                                   data-fslightbox="lightbox-projects"
+                                                   href="{% static 'assets/media/inma/hangsa/gi4.jpg' %}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                         style="background-image:url({% static 'assets/media/inma/hangsa/gi4.jpg' %})"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                                <!--end::Item-->
+                                            </div>
+                                            <!--end::Col-->
+                                            <!--begin::Col-->
+                                            <div class="col-lg-6">
+                                                <!--begin::Item-->
+                                                <a class="d-block card-rounded overlay"
+                                                   data-fslightbox="lightbox-projects"
+                                                   href="{% static 'assets/media/inma/hangsa/gi2.jpg' %}">
+                                                    <!--begin::Image-->
+                                                    <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                         style="background-image:url({% static 'assets/media/inma/hangsa/gi2.jpg' %})"></div>
+                                                    <!--end::Image-->
+                                                    <!--begin::Action-->
+                                                    <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                        <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </a>
+                                                <!--end::Item-->
+                                            </div>
+                                            <!--end::Col-->
+                                        </div>
+                                        <!--end::Row-->
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay" data-fslightbox="lightbox-projects"
+                                           href="{% static 'assets/media/inma/hangsa/gi3.jpg' %}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-250px"
+                                                 style="background-image:url({% static 'assets/media/inma/hangsa/gi3.jpg' %})"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                    <!--begin::Col-->
+                                    <div class="col-lg-6">
+                                        <!--begin::Item-->
+                                        <a class="d-block card-rounded overlay h-lg-100"
+                                           data-fslightbox="lightbox-projects"
+                                           href="{% static 'assets/media/inma/hangsa/gi1.jpg' %}">
+                                            <!--begin::Image-->
+                                            <div class="overlay-wrapper bgi-no-repeat bgi-position-center bgi-size-cover card-rounded h-lg-100 min-h-250px"
+                                                 style="background-image:url({% static 'assets/media/inma/hangsa/gi1.jpg' %})"></div>
+                                            <!--end::Image-->
+                                            <!--begin::Action-->
+                                            <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
+                                                <i class="bi bi-eye-fill fs-3x text-white"></i>
+                                            </div>
+                                            <!--end::Action-->
+                                        </a>
+                                        <!--end::Item-->
+                                    </div>
+                                    <!--end::Col-->
+                                </div>
+                                <!--end::Row-->
+                            </div>
+                            <!--end::Tab pane-->
+                        </div>
+                        <!--end::Tabs content-->
+                    </div>
+                    <!--end::Card body-->
+                </div>
+                <!--end::Card-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Projects Section-->
+        <!--begin::Pricing Section-->
+        <div class="mt-sm-n20">
+            <!--begin::Curve top-->
+            <div class="landing-curve landing-dark-color">
+                <svg viewBox="15 -1 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 48C4.93573 47.6644 8.85984 47.3311 12.7725 47H1489.16C1493.1 47.3311 1497.04 47.6644 1501 48V47H1489.16C914.668 -1.34764 587.282 -1.61174 12.7725 47H1V48Z"
+                          fill="currentColor"></path>
+                </svg>
+            </div>
+            <!--end::Curve top-->
+            <!--begin::Wrapper-->
+            <div class="py-20 landing-dark-bg">
+                <!--begin::Container-->
+                <div class="container">
+                    <!--begin::Plans-->
+                    <div class="d-flex flex-column container pt-lg-20">
+                        <!--begin::Heading-->
+                        <div class="mb-13 text-center">
+                            <h1 class="fs-2hx fw-bolder text-white mb-5" id="pricing"
+                                data-kt-scroll-offset="{default: 100, lg: 150}">동문회비</h1>
+                            <div class="text-gray-600 fw-bold fs-5">
+                                오 라일락 꽃이 지는 날 goodbye
+너의 대답이 날 울려
+안녕 약속 같은 안녕<br>
+하이얀 우리 봄날에 climax
+아 얼마나 기쁜 일이야
+                            </div>
+                        </div>
+                        <!--end::Heading-->
+                        <!--begin::Pricing-->
+                        <div class="text-center" id="kt_pricing">
+                            <!--begin::Nav group-->
+                            <div class="nav-group landing-dark-bg d-inline-flex mb-15" data-kt-buttons="true"
+                                 style="border: 1px dashed #2B4666;">
+                                <a href="#"
+                                   class="btn btn-color-gray-600 btn-active btn-active-success px-6 py-3 me-2 active"
+                                   data-kt-plan="month">Monthly</a>
+                                <a href="#" class="btn btn-color-gray-600 btn-active btn-active-success px-6 py-3"
+                                   data-kt-plan="annual">Annual</a>
+                            </div>
+                            <!--end::Nav group-->
+                        </div>
+                        <!--end::Pricing-->
+                    </div>
+                    <!--end::Plans-->
+                </div>
+                <!--end::Container-->
+            </div>
+            <!--end::Wrapper-->
+            <!--begin::Curve bottom-->
+            <div class="landing-curve landing-dark-color">
+                <svg viewBox="15 12 1470 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 11C3.93573 11.3356 7.85984 11.6689 11.7725 12H1488.16C1492.1 11.6689 1496.04 11.3356 1500 11V12H1488.16C913.668 60.3476 586.282 60.6117 11.7725 12H0V11Z"
+                          fill="currentColor"></path>
+                </svg>
+            </div>
+            <!--end::Curve bottom-->
+        </div>
+        <!--end::Pricing Section-->
+        <!--begin::Footer Section-->
+        <!--end::Footer Section-->
+        <!--begin::Scrolltop-->
+        <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+            <!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+            <span class="svg-icon">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+						<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
+                              fill="black"/>
+						<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+                              fill="black"/>
+					</svg>
+				</span>
+            <!--end::Svg Icon-->
+        </div>
+        <!--end::Scrolltop-->
+    </div>
+
+
+{% endblock content %}
+
+{% block scripts %}
+    <script src="{% static 'assets/js/custom/landing.js' %}?v={{ version }}"></script>
+    <script src="{% static 'assets/js/custom/pages/pricing/general.js' %}?v={{ version }}"></script>
+{% endblock scripts %}
