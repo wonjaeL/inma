@@ -8,38 +8,22 @@
             <span class="menu-arrow d-lg-none"></span>
         </span>
         <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-            <div class="menu-item">
-                <a class="menu-link active py-3" href="/">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">소개</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">조직도</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">회칙</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">모교소개</span>
-                </a>
-            </div>
+            {% for menu in menus %}
+                <div class="menu-item">
+                    <a href="/{{ menu.0 }}"
+                    {% if menu.0 == page %}
+                    class="menu-link active py-3"
+                    {% else %}
+                    class="menu-link py-3"
+                    {% endif %}
+                    >
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">{{ menu.1 }}</span>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <div data-kt-menu-trigger="{default:'click', 'lg': 'hover'}" data-kt-menu-placement="bottom-start"
