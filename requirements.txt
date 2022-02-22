@@ -1,0 +1,7 @@
+django
+djangorestframework
+social-auth-app-django
+GitPython
+django-sslserver
+python-dateutil
+django-ckeditor
