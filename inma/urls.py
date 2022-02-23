@@ -36,6 +36,7 @@ def mul(a, b):
 def get_page(page, request, context=None):
     if not context:
         context = {}
+    context['menu_title'] = ['동문회 소개', '동문회비', '동문회 소식', '커뮤니티'][context.get('menu_index', 0)]
     context['page'] = page
     context['version'] = git.Repo(search_parent_directories=True).head.object.hexsha
     context['static_url'] = '/static/'
@@ -49,12 +50,30 @@ router.register(r'courses', CourseViewset)
 #######  NEW UI
 #####################
 
-menus = [
+menu1 = [
     ('intro', '소개'),
     ('org', '조직도'),
     ('rules', '회칙'),
     ('school-intro', '모교소개'),
 ]
+menu2 = [
+    ('pricing', '회비 안내'),
+    # ('payment', '후원금 납부'),
+]
+menu3 = [
+    ('notice', '공지사항'),
+    ('bulletin', '회보'),
+    ('news', '교우 소식'),
+]
+menu4 = [
+    # ('inc-info', '기업정보 공유'),
+    # ('job-info', '채용정보 공유'),
+    # ('grade', '기수별 모임'),
+    # ('small', '소모임'),
+    ('free-board', '자유게시판'),
+    ('executive-board', '임원게시판'),
+]
+menus = [menu1, menu2, menu3, menu4]
 
 
 def main_page(request):
@@ -62,34 +81,59 @@ def main_page(request):
     return get_page('main', request, context)
 
 
-def list_page(request):
-    context = {}
-    return get_page('list', request, context)
-
-
-def post_page(request):
-    context = {}
-    return get_page('post', request, context)
-
-
 def intro_page(request):
-    context = {'menus': menus}
+    context = {'menus': menus, 'aside': menu1, 'menu_index': 0}
     return get_page('intro', request, context)
 
 
 def org_page(request):
-    context = {'menus': menus}
+    context = {'menus': menus, 'aside': menu1, 'menu_index': 0}
     return get_page('org', request, context)
 
 
 def rules_page(request):
-    context = {'menus': menus}
+    context = {'menus': menus, 'aside': menu1, 'menu_index': 0}
     return get_page('rules', request, context)
 
 
 def school_intro_page(request):
-    context = {'menus': menus}
+    context = {'menus': menus, 'aside': menu1, 'menu_index': 0}
     return get_page('school-intro', request, context)
+
+
+def pricing_page(request):
+    context = {'menus': menus, 'aside': menu2, 'menu_index': 1}
+    return get_page('pricing', request, context)
+
+
+def notice_page(request):
+    context = {'menus': menus, 'aside': menu3, 'menu_index': 2}
+    return get_page('notice', request, context)
+
+
+def post_page(request):
+    context = {'menus': menus, 'aside': menu3, 'menu_index': 2}
+    return get_page('post', request, context)
+
+
+def bulletin_page(request):
+    context = {'menus': menus, 'aside': menu3, 'menu_index': 2}
+    return get_page('bulletin', request, context)
+
+
+def news_page(request):
+    context = {'menus': menus, 'aside': menu3, 'menu_index': 2}
+    return get_page('news', request, context)
+
+
+def free_board_page(request):
+    context = {'menus': menus, 'aside': menu4, 'menu_index': 3}
+    return get_page('free-board', request, context)
+
+
+def executive_board_page(request):
+    context = {'menus': menus, 'aside': menu4, 'menu_index': 3}
+    return get_page('executive-board', request, context)
 
 
 urlpatterns = [
@@ -105,12 +149,20 @@ urlpatterns = [
     path('logout/', main_page, name='logout'),
 
     path('', main_page, name="main"),
-    path('list', list_page, name="list"),
-    path('post', post_page, name="post"),
     path('intro', intro_page, name="intro"),
     path('org', org_page, name="org"),
     path('rules', rules_page, name="rules"),
     path('school-intro', school_intro_page, name="school-intro"),
+    path('pricing', pricing_page, name="pricing"),
+
+    path('post', post_page, name="post"),
+
+    path('notice', notice_page, name="notice"),
+    path('bulletin', bulletin_page, name="bulletin"),
+    path('news', news_page, name="news"),
+    path('free-board', free_board_page, name="free-board"),
+    path('executive-board', executive_board_page, name="executive-board"),
+
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 

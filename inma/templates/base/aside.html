@@ -15,11 +15,13 @@
             <!--begin::Heading-->
             <div class="menu-item">
                 <div class="menu-content pb-2">
-                    <span class="menu-section text-muted text-uppercase fs-7 fw-bolder">동문회 소개</span>
+                    <span class="menu-section text-muted text-uppercase fs-7 fw-bolder">
+                        {{ menu_title }}
+                    </span>
                 </div>
             </div>
             <!--end::Heading-->
-            {% for menu in menus %}
+            {% for menu in aside %}
                 <div class="menu-item">
                     <a href="/{{ menu.0 }}"
                     {% if menu.0 == page %}

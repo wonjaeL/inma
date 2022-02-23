@@ -1,0 +1,139 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="px-5 px-lg-20 py-10 py-md-15">
+        <h1 class="mb-5" style="font-weight: 600">총동창회는 동문 여러분의 참여와 협조로 나날이 발전하고 있습니다.</h1>
+        <h2 style="font-weight: 600;color:#c5a86f;">동문님의 진심어린 회비와 후원금은 모교 발전 지원과<br>
+            동창회 활성화 및 동창신문 제작(매월 11만부 배포)에 큰 힘이 되고 있습니다.</h2>
+
+
+        <h2 class="mt-10"><i class="bi bi-info-circle text-dark fs-2"></i> 회비를 납부하시면...</h2>
+        <div class="row" style="--bs-gutter-y: 1rem">
+            <div class="col-4">
+                <div class="card border-hover-dark">
+                    <div class="card-body d-flex flex-center flex-column p-9">
+                        <div class="symbol symbol-65px symbol-circle mb-5">
+                            <img src="data:image/jpeg;base64,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"
+                                 style="object-fit: contain" alt="image"/>
+                        </div>
+                        <a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">혜택 1</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-hover-dark">
+                    <div class="card-body d-flex flex-center flex-column p-9">
+                        <div class="symbol symbol-65px symbol-circle mb-5">
+                            <img src="https://t1.daumcdn.net/cfile/blog/1613F5435102172C32"
+                                 style="object-fit: contain" alt="image"/>
+                        </div>
+                        <a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">혜택 2</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card border-hover-dark">
+                    <div class="card-body d-flex flex-center flex-column p-9">
+                        <div class="symbol symbol-65px symbol-circle mb-5">
+                            <img src="https://cdnweb01.wikitree.co.kr/webdata/editor/202105/10/img_20210510152219_b17d03cb.webp"
+                                 style="object-fit: contain" alt="image"/>
+                        </div>
+                        <a href="#" class="fs-4 text-gray-800 text-hover-primary fw-bolder mb-0">혜택 3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <style>
+            table, th, td {
+                border: 1px solid #eff2f5 !important;
+                font-weight: 400 !important;
+            }
+        </style>
+        <h2 class="mt-10"><i class="bi bi-info-circle text-dark fs-2"></i> 회비 안내</h2>
+        <table class="table align-middle g-7 text-center mb-5">
+            <colgroup>
+                <col width="15%">
+                <col width="25%">
+                <col width="25%">
+                <col width="35%">
+            </colgroup>
+            <thead class="bg-gray-300 fs-2">
+            <tr>
+                <th> 구분</th>
+                <th> 입회비</th>
+                <th> 연회비</th>
+                <th> 평생회비</th>
+            </tr>
+            </thead>
+            <tbody class="fs-4">
+            <tr>
+                <td> 일반회원</td>
+                <td rowspan="2"> 10,000원</td>
+                <td> 30,000원</td>
+                <td> 300,000원<br> (65세 이상은 200,000원)</td>
+            </tr>
+            <tr>
+                <td> 이사회원</td>
+                <td> 100,000원</td>
+                <td> 700,000원<br> (65세 이상은 500,000원)</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p>- 입회비는 입회 시 한번 납부하시면 됩니다.</p>
+        <p>- 회비는 연회비와 평생회비 중 한 가지 선택해서 납부하시면 됩니다.</p>
+
+        <h2 class="mt-10 mb-5"><i class="bi bi-info-circle text-dark fs-2"></i>
+            무통장 입금 <span class="text-danger">(우대증 발급에 영업일 1-2일 소요)</span>
+        </h2>
+        <div class="card shadow-sm">
+            <div class="card-body fs-3">
+                다음 계좌로 입금하여 주시면 됩니다. <span class="text-danger">(성함, 학과, 입학연도를 같이 표기)</span><br>
+                - 농협 079-01-442414<br>
+                - 신한 140-001-180304<br>
+                - 우리 1005-401-137376<br>
+                - 국민 827-01-0248-009<br>
+                <strong>예금주 : 인천전자마이스터고등학교 동창회</strong>
+            </div>
+        </div>
+
+        <h2 class="mt-10 mb-5"><i class="bi bi-info-circle text-dark fs-2"></i>
+            지로 입금 <span class="text-danger">(우대증 발급에 영업일 2-3일 소요)</span>
+        </h2>
+        <div class="card shadow-sm">
+            <div class="card-body fs-3">
+                동창신문과 동봉된 지로용지를 가까운 금융기관의 공과금 자동화기기에서 납부하시면 됩니다.
+            </div>
+        </div>
+
+        <h2 class="mt-10 mb-5"><i class="bi bi-info-circle text-dark fs-2"></i>
+            지로 입금 <span class="text-danger">(우대증 발급에 영업일 2-3일 소요)</span>
+        </h2>
+        <div class="card shadow-sm">
+            <div class="card-body fs-3">
+                동창신문과 동봉된 지로용지를 가까운 금융기관의 공과금 자동화기기에서 납부하시면 됩니다.
+            </div>
+        </div>
+
+
+        <div class="text-center">
+            <a href="#" class="mt-10 btn btn-light-warning px-6 me-0 me-sm-10">
+                <p class="fs-3 fw-bolder m-0">입력정보 확인</p>
+                <p class="fs-7 m-0">입력정보 확인 후, 신용카드 결제를 진행해주세요.</p>
+            </a>
+            <a href="#" class="mt-10 btn btn-light-success  px-6">
+                <p class="fs-3 fw-bolder m-0">납부확인 하기</p>
+                <p class="fs-7 m-0">회비·후원금 납부내역을 확인할 수 있습니다.</p>
+            </a>
+        </div>
+
+
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+{% endblock scripts %}

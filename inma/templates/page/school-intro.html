@@ -3,13 +3,104 @@
 {% load static %}
 
 {% block content %}
-    <div class="px-5 px-lg-20 text-center">
-        <h1 class="mt-10 mt-lg-20 fs-3x">모교소개</h1>
+    <div class="px-5 px-lg-20 ">
+        <h1 class="mt-10 mt-lg-20 fs-3x text-center">모교소개</h1>
+        <div class="py-5">
+            <style>
+                th {
+                    font-weight: 600 !important;
+                    font-size: 1.5rem !important;
+                }
 
-        <img class="mt-10 w-75" src="{% static 'images/school-intro1.png' %}" alt="소개 사진1">
-        <img class="mt-10 w-75" src="{% static 'images/school-intro2.png' %}" alt="소개 사진2">
-        <img class="mt-10 w-75" src="{% static 'images/school-intro3.png' %}" alt="소개 사진3">
-        <img class="mt-10 w-75" src="{% static 'images/school-intro4.png' %}" alt="소개 사진4">
+                td {
+                    font-size: 1.25rem !important;
+                    padding-top: 2rem !important;
+                }
+            </style>
+
+            <h3 class="my-5">연혁</h3>
+            <table class="table table-row-bordered table-row-gray-300 gy-7 border-top border-bottom">
+                <colgroup>
+                    <col style="width:10%;">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th>2020</th>
+                    <td>
+                        <p><strong>05월</strong> 모교 개교 115주년 기념식</p>
+                        <p><strong>05월</strong> 교우회 회원수 35만명 돌파</p>
+                        <p><strong>04월</strong> 4·18의거 60주년</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2019</th>
+                    <td><strong>03월</strong> 제33대 교우회장에 具滋烈교우 추대 선출</td>
+                </tr>
+                <tr>
+                    <th>2018</th>
+                    <td>
+                        <p><strong>12월</strong> '역사라운지 1907' 개관</p>
+                        <p><strong>03월</strong> 고대교우회 창립 111주년</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2017</th>
+                    <td><strong>06월</strong> 제1회 교우연합합창제 개최</td>
+                </tr>
+                <tr>
+                    <th>2016</th>
+                    <td><strong>03월</strong> 제32대 교우회장에 李鶴洙교우 추대 선출</td>
+                </tr>
+                <tr>
+                    <th>2015</th>
+                    <td><strong>05월</strong> 모교 개교 110주년 기념식</td>
+                </tr>
+                <tr>
+                    <th>2014</th>
+                    <td>
+                        <p><strong>10월</strong> 모교 안암동 시대80주년 기념 콘서트</p>
+                        <p><strong>01월</strong> 제1회 교우회 학술상 시상식</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2013</th>
+                    <td><strong>03월</strong> 제31대 교우회장에 周善會교우 추대 선출</td>
+                </tr>
+                <tr>
+                    <th>2012</th>
+                    <td>
+                        <p><strong>08월</strong> 교우회비 납부 방식 개선 (신용카드 납부 방식 도입)</p>
+                        <p><strong>04월</strong>《고려대학교 4·18의거실록》출판기념회</p>
+                        <p><strong>03월</strong> 고대교우회보 지령 500호 기념식 및 《고대유사》출판기념회</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2011</th>
+                    <td>
+                        <p><strong>11월</strong> 임시총회 (회장선출 합의추대 방식으로 개정, 운영위원회 신설, 회장임기 3년 단임제로 변경)</p>
+                        <p><strong>07월</strong> 제30대 교우회장에 李亮燮교우 선출</p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>2010</th>
+                    <td>
+                        <p><strong>12월</strong> 교우회장 직무대행에 宋正鎬교우 취임</p>
+                        <p><strong>10월</strong> 고대교우회보 스마트폰 어플리케이션 개발</p>
+                        <p><strong>09월</strong> 고대교우회보 창간 40주년 기념식 (《춘수저대》,《자명고》발간, DVD교우회보 제작)</p>
+                        <p><strong>05월</strong> 제1회 고대교우회 미주지부연합회 전미주대회</p>
+                        <p><strong>04월</strong> 4월혁명 50주년 기념행사 개최</p>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center">
+            <img class="mt-10 w-75" src="{% static 'images/school-intro1.png' %}" alt="소개 사진1">
+            <img class="mt-10 w-75" src="{% static 'images/school-intro2.png' %}" alt="소개 사진2">
+            <img class="mt-10 w-75" src="{% static 'images/school-intro3.png' %}" alt="소개 사진3">
+            <img class="mt-10 w-75" src="{% static 'images/school-intro4.png' %}" alt="소개 사진4">
+        </div>
     </div>
 {% endblock content %}
 

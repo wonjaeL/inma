@@ -2,20 +2,20 @@
 <div class="menu menu-lg-rounded menu-column menu-lg-row menu-state-bg menu-title-gray-700 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-400 fw-bold my-5 my-lg-0 align-items-stretch"
      id="#kt_header_menu" data-kt-menu="true">
     <div data-kt-menu-trigger="{default:'click', 'lg': 'hover'}" data-kt-menu-placement="bottom-start"
-         class="menu-item here show menu-lg-down-accordion me-lg-1">
+         class="menu-item menu-lg-down-accordion me-lg-1">
         <span class="menu-link py-3">
             <span class="menu-title">동문회 소개</span>
             <span class="menu-arrow d-lg-none"></span>
         </span>
         <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-            {% for menu in menus %}
+            {% for menu in menus.0 %}
                 <div class="menu-item">
                     <a href="/{{ menu.0 }}"
-                    {% if menu.0 == page %}
-                    class="menu-link active py-3"
-                    {% else %}
-                    class="menu-link py-3"
-                    {% endif %}
+                            {% if menu.0 == page %}
+                       class="menu-link active py-3"
+                            {% else %}
+                       class="menu-link py-3"
+                            {% endif %}
                     >
                         <span class="menu-bullet">
                             <span class="bullet bullet-dot"></span>
@@ -33,22 +33,22 @@
             <span class="menu-arrow d-lg-none"></span>
         </span>
         <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">회비 안내</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">후원금 납부</span>
-                </a>
-            </div>
+            {% for menu in menus.1 %}
+                <div class="menu-item">
+                    <a href="/{{ menu.0 }}"
+                            {% if menu.0 == page %}
+                       class="menu-link active py-3"
+                            {% else %}
+                       class="menu-link py-3"
+                            {% endif %}
+                    >
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">{{ menu.1 }}</span>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <div data-kt-menu-trigger="{default:'click', 'lg': 'hover'}" data-kt-menu-placement="bottom-start"
@@ -58,30 +58,22 @@
             <span class="menu-arrow d-lg-none"></span>
         </span>
         <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">공지사항</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">회보</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">교우 소식</span>
-                </a>
-            </div>
+            {% for menu in menus.2 %}
+                <div class="menu-item">
+                    <a href="/{{ menu.0 }}"
+                            {% if menu.0 == page %}
+                       class="menu-link active py-3"
+                            {% else %}
+                       class="menu-link py-3"
+                            {% endif %}
+                    >
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">{{ menu.1 }}</span>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
 
@@ -92,60 +84,30 @@
             <span class="menu-arrow d-lg-none"></span>
         </span>
         <div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown menu-rounded-0 py-lg-4 w-lg-225px">
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">기업정보 공유</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">채용정보 공유</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">기수별 모임</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">소모임</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">자유게시판</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a class="menu-link py-3" href="/list">
-                    <span class="menu-bullet">
-                        <span class="bullet bullet-dot"></span>
-                    </span>
-                    <span class="menu-title">임원 게시판</span>
-                </a>
-            </div>
+            {% for menu in menus.3 %}
+                <div class="menu-item">
+                    <a href="/{{ menu.0 }}"
+                            {% if menu.0 == page %}
+                       class="menu-link active py-3"
+                            {% else %}
+                       class="menu-link py-3"
+                            {% endif %}
+                    >
+                        <span class="menu-bullet">
+                            <span class="bullet bullet-dot"></span>
+                        </span>
+                        <span class="menu-title">{{ menu.1 }}</span>
+                    </a>
+                </div>
+            {% endfor %}
         </div>
     </div>
     <div data-kt-menu-trigger="click" data-kt-menu-placement="bottom-start"
          class="menu-item menu-lg-down-accordion me-lg-1">
         <span class="menu-link py-3">
-            <span class="menu-title">온라인 문의</span>
+            <span class="menu-title">
+                <a href="/qna">온라인 문의</a>
+            </span>
             <span class="menu-arrow d-lg-none"></span>
         </span>
     </div>
