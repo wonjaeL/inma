@@ -136,6 +136,14 @@ def executive_board_page(request):
     return get_page('executive-board', request, context)
 
 
+def sign_in_page(request):
+    return get_page('sign-in', request)
+
+
+def sign_up_page(request):
+    return get_page('sign-up', request)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     re_path(r'^favicon\.ico$', RedirectView.as_view(url='/static/favicon.ico', permanent=True)),
@@ -162,6 +170,9 @@ urlpatterns = [
     path('news', news_page, name="news"),
     path('free-board', free_board_page, name="free-board"),
     path('executive-board', executive_board_page, name="executive-board"),
+
+    path('sign-in', sign_in_page, name="sign-in"),
+    path('sign-up', sign_up_page, name="sign-up"),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
