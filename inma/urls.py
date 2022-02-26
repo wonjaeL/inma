@@ -4,7 +4,8 @@ import git
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect
 from django.template.defaultfilters import register
 from django.urls import path, include, re_path
 from django.views.decorators.csrf import csrf_exempt
@@ -12,7 +13,7 @@ from django.views.generic.base import RedirectView
 from django.views.static import serve
 from rest_framework.routers import DefaultRouter
 
-from inma.apps.courses.views import CourseViewset
+from inma.apps.users.views import UserViewset
 
 logger = logging.getLogger(__name__)
 
@@ -40,11 +41,15 @@ def get_page(page, request, context=None):
     context['page'] = page
     context['version'] = git.Repo(search_parent_directories=True).head.object.hexsha
     context['static_url'] = '/static/'
+
+    if 'mypage' not in request.path and request.user.is_authenticated and (
+            not request.user.profile or not request.user.profile.grade):
+        return redirect('/mypage?is_first')
     return render(request, f'page/{page}.html', context)
 
 
 router = DefaultRouter()
-router.register(r'courses', CourseViewset)
+router.register(r'users', UserViewset)
 
 #####################
 #######  NEW UI
@@ -126,22 +131,37 @@ def news_page(request):
     return get_page('news', request, context)
 
 
+@login_required
 def free_board_page(request):
     context = {'menus': menus, 'aside': menu4, 'menu_index': 3}
     return get_page('free-board', request, context)
 
 
+@login_required
 def executive_board_page(request):
     context = {'menus': menus, 'aside': menu4, 'menu_index': 3}
     return get_page('executive-board', request, context)
 
 
 def sign_in_page(request):
+    from django.contrib import auth
+    auth.logout(request)
     return get_page('sign-in', request)
 
 
 def sign_up_page(request):
     return get_page('sign-up', request)
+
+
+def mypage(request):
+    context = {'menus': menus, 'is_first': 'is_first' in request.GET}
+    return get_page('mypage', request, context)
+
+
+def logout_page(request):
+    from django.contrib import auth
+    auth.logout(request)
+    return main_page(request)
 
 
 urlpatterns = [
@@ -150,11 +170,11 @@ urlpatterns = [
     re_path('^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),
     re_path('^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}),
 
-    path('v1/', include(router.urls)),
+    path('api/', include(router.urls)),
 
     # new
     path('', include('social_django.urls', namespace='social')),
-    path('logout/', main_page, name='logout'),
+    path('logout/', logout_page, name='logout'),
 
     path('', main_page, name="main"),
     path('intro', intro_page, name="intro"),
@@ -173,6 +193,7 @@ urlpatterns = [
 
     path('sign-in', sign_in_page, name="sign-in"),
     path('sign-up', sign_up_page, name="sign-up"),
+    path('mypage', mypage, name="mypage"),
 
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ]

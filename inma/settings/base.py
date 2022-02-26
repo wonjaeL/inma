@@ -3,6 +3,8 @@ from pathlib import Path
 
 from .logging import get_logging
 
+from .social import *
+
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 SECRET_KEY = 'django-insecure-hmlm=$&(8e*jgv58uq1doiuvgz))e+24ut9ps@$)6d#(!uj3dz'
@@ -18,8 +20,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'inma.apps.board',
-    'inma.apps.courses',
+    'inma.apps.users',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -30,11 +34,21 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "social_django.middleware.SocialAuthExceptionMiddleware",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 ROOT_URLCONF = 'inma.urls'
 
 LOGGING = get_logging(base_dir=BASE_DIR)
+
+LOGIN_URL = '/sign-in'
 
 TEMPLATE_DIR = os.path.join(os.path.join(BASE_DIR, 'inma'), 'templates')
 TEMPLATES = [

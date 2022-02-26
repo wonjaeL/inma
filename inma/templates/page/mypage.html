@@ -1,0 +1,280 @@
+{% extends '../base/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <div class="container-fluid text-center py-10 bg-light-warning">
+        <h1>내 정보 수정</h1>
+    </div>
+
+    <div class="container pt-5 px-0">
+        <div class="card mb-5 mb-xl-10">
+            <!--begin::Card header-->
+            <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+                 data-bs-target="#kt_account_profile_details" aria-expanded="true"
+                 aria-controls="kt_account_profile_details">
+                <!--begin::Card title-->
+                <div class="card-title m-0">
+                    <h3 class="fw-bolder m-0">내 정보 수정</h3>
+                </div>
+                <!--end::Card title-->
+            </div>
+            <!--begin::Card header-->
+            <!--begin::Content-->
+            <div id="kt_account_settings_profile_details" class="collapse show">
+                <!--begin::Form-->
+                <div class="card-body border-top p-9">
+                    <div class="row mb-6">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label required fw-bold fs-6">이름</label>
+                        <!--end::Label-->
+                        <!--begin::Col-->
+                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                            <input type="text" name="company" id="input-name"
+                                   class="form-control form-control-lg form-control-solid"
+                                   placeholder="이름을 입력해주세요" value="{{ user.profile.name }}">
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <div class="row mb-6">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label fw-bold fs-6">프로필 사진</label>
+                        <!--end::Label-->
+                        <!--begin::Col-->
+                        <div class="col-lg-8">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-outline" data-kt-image-input="true"
+                                 style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                                <!--begin::Preview existing avatar-->
+                                <div class="image-input-wrapper w-125px h-125px" id="profile-image"
+                                     style="background-image: url({{ user.profile.profile }})"></div>
+                                <!--end::Preview existing avatar-->
+                                <!--begin::Label-->
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                       data-kt-image-input-action="change" data-bs-toggle="tooltip" title=""
+                                       data-bs-original-title="Change avatar">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input id="avatar" type="file" name="avatar" accept=".png, .jpg, .jpeg">
+                                    <input type="hidden" name="avatar_remove">
+                                    <!--end::Inputs-->
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Cancel-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                      data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title=""
+                                      data-bs-original-title="Cancel avatar">
+																<i class="bi bi-x fs-2"></i>
+															</span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                                      data-kt-image-input-action="remove" data-bs-toggle="tooltip" title=""
+                                      data-bs-original-title="Remove avatar">
+																<i class="bi bi-x fs-2"></i>
+															</span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            <!--begin::Hint-->
+                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                            <!--end::Hint-->
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <div class="row mb-6">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label fw-bold fs-6">
+                            <span class="required">전화번호</span>
+                            <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip" title=""
+                               data-bs-original-title="연락가능한 전화번호를 입력해주세요"
+                               aria-label="연락가능한 전화번호를 입력해주세요"></i>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Col-->
+                        <div class="col-lg-8 fv-row fv-plugins-icon-container">
+                            <input id="input-phone" type="tel" name="phone"
+                                   class="form-control form-control-lg form-control-solid"
+                                   placeholder="010-xxxx-xxxx" value="{{ user.profile.phone|default:'' }}">
+                            <div class="fv-plugins-message-container invalid-feedback"></div>
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <div class="row mb-6">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label fw-bold fs-6">
+                            <span class="required">기수</span>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Col-->
+                        <div class="col-lg-8 fv-row">
+                            <select id="input-grade" name="currnecy" aria-label="Select a Timezone"
+                                    data-control="select2"
+                                    data-placeholder="기수를 선택해주세요"
+                                    class="form-select form-select-solid form-select-lg select2-hidden-accessible"
+                                    data-select2-id="select2-data-19-faq4" tabindex="-1" aria-hidden="true">
+                                <option value="" data-select2-id="select2-data-21-p3ts3">기수를 선택해주세요</option>
+                                {% for i in '123456789012345'|make_list %}
+                                    <option value="{{ forloop.counter }}"
+                                            {% if forloop.counter == user.profile.grade %}
+                                            selected
+                                            {% endif %}
+                                    >
+                                        {{ forloop.counter }}기 ({{ forloop.counter|add:2009 }}
+                                        입학, {{ forloop.counter|add:2012 }} 졸업)
+                                    </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <!--end::Col-->
+                    </div>
+
+
+                    <div class="row mb-6">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label fw-bold fs-6">
+                            <span class="required">학과</span>
+                        </label>
+                        <!--end::Label-->
+                        <!--begin::Col-->
+                        <div class="col-lg-8 fv-row">
+                            <select id="input-department" name="currnecy" aria-label="Select a Timezone"
+                                    data-control="select2"
+                                    data-placeholder="학과를 선택해주세요"
+                                    class="form-select form-select-solid form-select-lg select2-hidden-accessible"
+                                    data-select2-id="select2-data-19-faq4" tabindex="-1" aria-hidden="true">
+                                <option value="" data-select2-id="select2-data-21-p3ts3">학과를 선택해주세요</option>
+                                <option value="제어과"
+                                        {% if "제어과" == user.profile.department %}
+                                        selected
+                                        {% endif %}>
+                                    제어과
+                                </option>
+                                <option value="회로과"
+                                        {% if "회로과" == user.profile.department %}
+                                        selected
+                                        {% endif %}>
+                                    회로과
+                                </option>
+                                <option value="통신과"
+                                        {% if "통신과" == user.profile.department %}
+                                        selected
+                                        {% endif %}>
+                                    통신과
+                                </option>
+                            </select>
+                        </div>
+                        <!--end::Col-->
+                    </div>
+                    <!--begin::Input group-->
+                    <div class="row mb-0">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label fw-bold fs-6">
+                            <span class="required">동문회 알림 수신동의</span>
+                        </label>
+                        <!--begin::Label-->
+                        <!--begin::Label-->
+                        <div class="col-lg-8 d-flex align-items-center">
+                            <div class="form-check form-check-solid form-switch fv-row">
+                                <input id="input-marketing" class="form-check-input w-45px h-30px" type="checkbox"
+                                       id="allowmarketing"
+                                        {% if user.profile.marketing %}
+                                       checked="checked"
+                                        {% endif %}>
+                                <label class="form-check-label" for="allowmarketing"></label>
+                            </div>
+                        </div>
+                        <!--begin::Label-->
+                    </div>
+                    <!--end::Input group-->
+                </div>
+                <!--end::Card body-->
+                <!--begin::Actions-->
+                <div class="card-footer d-flex justify-content-end py-6 px-9">
+                    <a class="btn btn-light-dark me-3" href="{% url 'main' %}">돌아가기</a>
+                    <button class="btn btn-primary" id="save-button">저장</button>
+                </div>
+                <!--end::Actions-->
+            </div>
+            <!--end::Content-->
+        </div>
+    </div>
+
+    <div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+        <span class="svg-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)"
+                      fill="black"/>
+                <path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z"
+                      fill="black"/>
+            </svg>
+        </span>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script>
+        $(document).ready(function () {
+
+            var isFirst = '{{ is_first }}' == 'True';
+            if (isFirst) {
+                Swal.fire({
+                    text: '동문회 가입을 환영합니다. 동문회 이용을 위해 정보를 입력해주세요',
+                    icon: "info",
+                    buttonsStyling: false,
+                    confirmButtonText: "닫기",
+                    customClass: {
+                        confirmButton: "btn btn-primary"
+                    },
+                });
+            }
+
+            $('#save-button').on('click', function () {
+                var data = {
+                    name: $('#input-name').val(),
+                    profile: $('#profile-image').css('background-image'),
+                    phone: $('#input-phone').val(),
+                    grade: $('#input-grade').val(),
+                    department: $('#input-department').val(),
+                    marketing: $('#input-marketing').attr('checked') !== ''
+                };
+
+                if (data.profile == 'none') {
+                    data.profile = null;
+                }
+                if (data.profile) {
+                    data.profile = data.profile.replace('url("', '')
+                    if (data.profile.endsWith('")')) {
+                        data.profile = data.profile.substring(0, data.profile.length - 3)
+                    }
+                }
+
+                inma.requests.patch('/api/users/mypage/', data).done(function (response) {
+                    Swal.fire({
+                        text: response.message,
+                        icon: "success",
+                        buttonsStyling: false,
+                        confirmButtonText: "닫기",
+                        customClass: {
+                            confirmButton: "btn btn-primary"
+                        },
+                    }).then(function () {
+                        inma.requests.refreshPage();
+                    });
+                }).fail(function (response) {
+                    Swal.fire({
+                        text: response.responseJSON.message,
+                        icon: "error",
+                        buttonsStyling: false,
+                        confirmButtonText: "닫기",
+                        customClass: {
+                            confirmButton: "btn btn-primary"
+                        }
+                    });
+                });
+            })
+        });
+    </script>
+{% endblock scripts %}

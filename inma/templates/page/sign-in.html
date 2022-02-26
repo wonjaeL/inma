@@ -52,28 +52,43 @@
         <div class="d-flex flex-center flex-column flex-column-fluid p-10 pb-lg-20">
             <!--begin::Logo-->
             <a href="/" class="mb-12">
-                <img alt="Logo" src="{% static 'assets/media/logos/logo-1.svg' %}" class="h-40px"/>
+                <img alt="Logo" src="{% static 'assets/media/inma/logo-desktop.jpg' %}" class="h-40px"/>
             </a>
             <!--end::Logo-->
             <!--begin::Wrapper-->
-            <div class="w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+            <div class="w-350px w-lg-500px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
                 <!--begin::Form-->
                 <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form" action="#">
                     <!--begin::Heading-->
                     <div class="text-center mb-10">
                         <!--begin::Title-->
-                        <h1 class="text-dark mb-3">Sign In to Metronic</h1>
+                        <h1 class="text-dark mb-3">로그인</h1>
                         <!--end::Title-->
-                        <!--begin::Link-->
-                        <div class="text-gray-400 fw-bold fs-4">New Here?
-                            <a href="../../demo5/dist/authentication/layouts/basic/sign-up.html"
-                               class="link-primary fw-bolder">Create an Account</a></div>
-                        <!--end::Link-->
                     </div>
                     <!--begin::Actions-->
                     <div class="text-center">
-                        <a href="#">
-                            <img class="w-100" src="{% static 'images/kakao-login.png' %}">
+                        <a class="btn w-100 py-5 d-flex" style="background-color: #f9e000"
+                           href="{% url 'social:begin' 'kakao' %}?next={{ request.GET.next }}">
+                            <div class="w-60px text-center">
+                                <img class="m-auto w-20px" src="{% static 'icons/kakao.svg' %}">
+                            </div>
+                            <span class="flex-fill">
+                                카카오 로그인
+                                </span>
+                        </a>
+                        <a class="btn w-100 py-5 mt-5 text-white d-flex" style="background-color: #1EC800"
+                           href="{% url 'social:begin' 'naver' %}?next={{ request.GET.next }}">
+                            <div class="w-60px text-center">
+                                <img class="me-10 w-60px" src="{% static 'icons/naver.svg' %}">
+                            </div>
+                            <span class="flex-fill">
+                            네이버 로그인
+                            </span>
+                        </a>
+
+
+                        <a class="btn btn-light-dark mt-5 text-center" href="{% url 'main' %}">
+                            돌아가기
                         </a>
                     </div>
                     <!--end::Actions-->

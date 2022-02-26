@@ -1,6 +1,7 @@
 django
 djangorestframework
 social-auth-app-django
+social-auth-core
 GitPython
 django-sslserver
 python-dateutil

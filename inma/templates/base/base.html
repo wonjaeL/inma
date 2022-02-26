@@ -75,12 +75,33 @@
     <!--begin::Javascript-->
     {% include './js.html' %}
 
+    {% csrf_token %}
+
+    <script>
+        var csrfToken = $('[name="csrfmiddlewaretoken"]').val();
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrfToken);
+                }
+            }
+        });
+    </script>
+
     {% block scripts %}
     {% endblock scripts %}
 
     <script>
         $(document).ready(function () {
-            $($('.menu-item.menu-lg-down-accordion.me-lg-1')[{{ menu_index }}]).addClass('here')
+            {% if menu_index > -1 %}
+                $($('.menu-item.menu-lg-down-accordion.me-lg-1')[{{ menu_index }}]).addClass('here show')
+            {% endif %}
         });
 
         $(window).on("load", function () {
