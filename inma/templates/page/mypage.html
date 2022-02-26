@@ -261,7 +261,7 @@
                             confirmButton: "btn btn-primary"
                         },
                     }).then(function () {
-                        inma.requests.refreshPage();
+                        inma.requests.changePage("{% url 'mypage' %}");
                     });
                 }).fail(function (response) {
                     Swal.fire({
